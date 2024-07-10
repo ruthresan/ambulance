@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        nav{
+            display:flex;
+            background-color: aqua;
+            align-items: center;
+        }
+        nav ul{
+            display:flex;
+            list-style-type:none;
+        }
+        nav ul li a{
+            text-decoration: none;
+            font-size: larger;
+            padding:0px 10px;
+            color:black;
+        }
+        nav button{
+            padding:15px 15px ;
+            border-radius: 10px;
+            margin-left: 160px;
+            font-size: large;          
+        }
+        .login{
+            margin-left: 8px;
+            background-color: green;
+        }
+        .booknow{
+            background-color: rgb(236, 74, 74);
+        }
+        .booknow:hover{
+             background-color: red;;
+        }
+        .login:hover{
+            background-color: rgb(48, 226, 48);
+        }
+        nav ul li a:hover{
+            color:purple;
+            /* background-color: aquamarine; */
+            border-bottom:2px solid purple;
+        } 
+        
+        .form{
+            background-color: aqua;
+            margin-top:4% ;
+            padding:2% ;
+            
+        }
+        .form-group{
+            margin-top:3%;
+            margin-left: 39%;
+            display:block;
+            margin-bottom:3%;
+            
+        }
+        .form-group label{
+            font-size:170%;
+        }
+        .form-group select{
+            padding:7px 10px;
+            width:20%;
+            border-radius: 10px;
+        }
+        .form-group #country{
+            margin-left: 5%;
+        }
+        .form-group #state{
+            margin-left: 9%;
+        }
+        .form-group #city{
+            margin-left: 11.3%;
+        }
+        .btn4 button{
+            width:25%;
+            margin-left: 38.2%;
+            padding:10px;
+            background-color: rgb(223, 22, 223);
+            border-radius: 10px;
+            font-size: 150%;
+        }
+        .btn4 button:hover{
+            background-color: rgb(133, 46, 133);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+    
+        <logo>
+            <img style="margin-left: 1% " src="emergency.png" width="75" height="75" >
+        </logo>
+        <h2 style="margin-left: .2%;">AMBULANCE</h2>
+    
+                    <ul>
+                
+                <li><a style="margin-left: 170px;" href="index.html">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="aboutus.html">AboutUs</a></li>
+                <li><a href="contactus.html">ContactUs</a></li>
+            </ul>
+            <form>
+            <button class="booknow" type="submit">Book Now</button>
+            <button class="login" type="submit">Login</button></form>
+            
+        </nav>
+    <div class="content"><br><br>
+       <center> <h1>Add Your Location Details</h1></center><br><br>
+    </div>
+    <div class="form">
+    <div class="form-group">
+        <label for="country">Country:</label>
+        <select id="country" onchange="updateState()">
+          <option value="">Select a country</option>
+          <option value="india">India</option>
+          <option value="UK">United Kingdom</option>
+          <option value="Canada">Canada</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="state">State:</label>
+        <select id="state" onchange="updateCity()">
+          <option value="">Select a state</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="city">City:</label>
+        <select id="city">
+          <option value="">Select a city</option>
+        </select>
+    </div>
+    <div class="btn4">
+    <button type="submit" onclick="move()">SUBMIT</button></div>
+     </div>
+    <script>
+        const stateData = {
+            india: ["TamilNadu","Kerala","karnataka"],
+            UK: ["England","Scotland","Wales"],
+            Canada: ["Ontario", "Quebec", "BritishColumbia"]               
+        };
+
+        const cityData = {
+           TamilNadu: ["Theni","Erode","Madurai"],
+           Kerala: ["Idukki", "Eranakulam", "Kottayam"],
+           Karnataka: ["Uduppi", "Hassan", "Mysusru"],
+           
+           England: ["London", "Manchester", "Birmingham"],
+          Scotland: ["Edinburgh", "Glasgow", "Aberdeen"],
+          Wales: ["Cardiff", "Swansea", "Newport"],
+          Ontario: ["Toronto", "Ottawa", "Hamilton"],
+          Quebec: ["Montreal", "Quebec City", "Laval"],
+          BritishColumbia: ["Vancouver", "Victoria", "Burnaby"]
+        };
+    const countrySelect = document.getElementById("country");
+    const stateSelect = document.getElementById("state");
+    const citySelect = document.getElementById("city");
+    
+    function updateState() {
+      const selectedCountry = countrySelect.value;
+      const states = stateData[selectedCountry];
+      
+      stateSelect.innerHTML = '<option value="">Select a state</option>';
+      citySelect.innerHTML = '<option value="">Select a city</option>';
+      
+      if (states) {
+        for (let i = 0; i < states.length; i++) {
+          const option = document.createElement("option");
+          option.text = states[i];
+          stateSelect.add(option);
+        }
+      }
+    }
+
+    
+    
+    function updateCity() {
+      const selectedState = stateSelect.value;
+      const cities = cityData[selectedState];
+      
+      citySelect.innerHTML = '<option value="">Select a city</option>';
+      
+      if (cities) {
+        for (let i = 0; i < cities.length; i++) {
+          const option = document.createElement("option");
+          option.text = cities[i];
+          citySelect.add(option);
+        }
+      }
+    }
+
+    function move(){
+        const selectElement = document.getElementById("city");
+        const selectedValue = selectElement.value;
+        if(selectedValue=="Theni"){
+            window.location.href="hospitlalbooking.html"
+        }
+
+    }
+    
+    </script>
+      
+</body>
+</html>

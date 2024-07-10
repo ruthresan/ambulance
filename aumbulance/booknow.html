@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ambulance service</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        nav{
+            display:flex;
+            background-color: aqua;
+            align-items: center;
+        }
+        nav ul{
+            display:flex;
+            list-style-type:none;
+        }
+        nav ul li a{
+            text-decoration: none;
+            font-size: larger;
+            padding:0px 10px;
+            color:black;
+        }
+        nav button{
+            padding:15px 15px ;
+            border-radius: 10px;
+            margin-left: 160px;
+            font-size: large;          
+        }
+        .login{
+            margin-left: 8px;
+            background-color: green;
+        }
+        .booknow{
+            background-color: rgb(236, 74, 74);
+        }
+        .booknow:hover{
+             background-color: red;;
+        }
+        .login:hover{
+            background-color: rgb(48, 226, 48);
+        }
+        nav ul li a:hover{
+            color:purple;
+            /* background-color: aquamarine; */
+            border-bottom:2px solid purple;
+        } 
+        .content{
+            /* background-color: beige; */
+            margin-left: 25%; 
+            width:50%;
+            text-align: center;
+            margin-top:10%;
+            color:black
+        } 
+        .form{
+            /* background-color: blanchedalmond; */
+            width:50%;
+            margin-left: 25%;
+            padding:20px 30px;
+            background-color: aquamarine;
+            border-radius: 30px;
+        }
+        form input{
+            display:block;  
+            padding:10px 20px;
+            box-sizing: border-box;
+            width:80%; 
+            border-radius: 10px;
+            margin-left:10% 
+        }
+        input#phno{
+            margin-top: 5%;
+            margin-bottom:5%;
+        }
+        .btn button {
+            margin-top:7%;
+            width:50%;
+            padding:15px;
+            border-radius: 10px;
+            background-color: rgb(223, 22, 223);          
+        }
+        .contactus{
+            background-color: rgb(58, 61, 65);
+            text-align: center; 
+            color:white   
+        }
+        .contactus form input{
+            width:50%
+        }
+        .contactus form input#name{
+            margin-top: 4%;
+            margin-bottom: 2%;
+            
+        }
+        .contactus form{
+            width:50%;
+            margin-left:33%;
+        }
+        .contactus form textarea{
+            width:50%;
+            margin-top:2%;
+            margin-left:-30% ;
+            border-radius: 8px; 
+            padding:5px      
+        }
+        .btn1 button{
+            margin-top:2%;
+            width:50%;
+            padding:10px;
+            margin-left: -30%;
+            border-radius: 7px;
+            background-color:rgb(223, 22, 223) ;
+
+        } 
+        .btn a{
+            text-decoration: none;
+            color:black;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+    
+        <logo>
+            <img style="margin-left: 1% " src="emergency.png" width="75" height="75" >
+        </logo>
+        <h2 style="margin-left: .2%;">AMBULANCE</h2>
+    
+                    <ul>
+                
+                <li><a style="margin-left: 170px;" href="index.html">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="aboutus.html">AboutUs</a></li>
+                <li><a href="contactus.html">ContactUs</a></li>
+            </ul>
+            <form>
+            <button class="booknow" type="submit">Book Now</button>
+            <button class="login" type="submit">Login</button></form>
+            
+        </nav>
+        <div class=" content">
+            <h1>Your Ambulance medical service</h1>
+            <br><br><br>
+            <h2>One Click and Ambulance comes right in<br>front of the door for help</h2>
+        </div><br><br><br>
+        <form class="form">
+                <div>
+                    <input type="tel" name="phno" id="phno" placeholder="your mobile no">
+                    <input type="text" name="username" id="username" placeholder="your full name">                
+                </div>
+                <div class="btn">
+                    <center><button type="submit"><a href="verify.html">SUBMIT</a></button></center>
+                </div>
+        </form><br><br>
+         <div class="contactus">
+          <br><br>  
+          <h1>Contact Us</h1>
+          <form>
+            <input type="text" name="name" id="name" placeholder="Enter Full Name">
+            <input type="email" name="email" id="email" placeholder="Enter Your Email">
+            <textarea name="message" id="messsage" rows="2" cols="4">Type Message...</textarea>
+            <div class="btn1">
+                <button type="submit" style="font-size: large;">submit</button>
+            </div>
+          </form><br><br>
+        </div> 
+        
+        
+</body>
+</html>

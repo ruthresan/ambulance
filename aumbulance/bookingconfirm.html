@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    nav{
+        display:flex;
+        background-color: aqua;
+        align-items: center;
+    }
+    nav ul{
+        display:flex;
+        list-style-type:none;
+    }
+    nav ul li a{
+        text-decoration: none;
+        font-size: larger;
+        padding:0px 10px;
+        color:black;
+    }
+    nav button{
+        padding:15px 15px ;
+        border-radius: 10px;
+        margin-left: 160px;
+        font-size: large;          
+    }
+    .login{
+        margin-left: 8px;
+        background-color: green;
+    }
+    .booknow{
+        background-color: rgb(236, 74, 74);
+    }
+    .booknow:hover{
+         background-color: red;;
+    }
+    .login:hover{
+        background-color: rgb(48, 226, 48);
+    }
+    nav ul li a:hover{
+        color:purple;
+        /* background-color: aquamarine; */
+        border-bottom:2px solid purple;
+    }
+    </style>
+</head>
+<body>
+    <nav>
+    
+        <logo>
+            <img style="margin-left: 1% " src="emergency.png" width="75" height="75" >
+        </logo>
+        <h2 style="margin-left: .2%;">AMBULANCE</h2>
+    
+                    <ul>
+                
+                <li><a style="margin-left: 170px;" href="index.html">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="aboutus.html">AboutUs</a></li>
+                <li><a href="contactus.html">ContactUs</a></li>
+            </ul>
+            <form>
+            <button class="booknow" type="submit">Book Now</button>
+            <button class="login" type="submit">Login</button></form>
+            
+        </nav>
+        <div class="content">
+            <center><p style="font-size:200% ;margin-top: 5%; color:red">Dont panic,xxxxxxxxx!</p></center><br><br>
+            <center><p style="font-size: 300%;margin-top: 5%; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">BOOKING CONFIRMED</p></center>
+            <center><p style="font-size: 175%;margin-top: 5%; color:chartreuse">Our Team Will Contact You in 5 min</p></center>
+        </div>
+    
+</body>
+</html>

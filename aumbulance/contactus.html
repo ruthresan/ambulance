@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    body{
+        background-image: url("contact.png");
+        background-repeat: no-repeat;
+        background-size: cover;        
+    }
+    nav{
+            display: flex;
+            background-color: aqua;
+            /* justify-content: space-around; */
+            align-items: center;
+        }
+        nav ul{
+            display: flex;
+            list-style-type:none;
+
+        }
+        nav  ul li a{
+            text-decoration: none;
+            margin:0 10px;
+            color:black;
+            font-size: larger;
+            padding:0 5px;
+            display:inline-block;
+        }
+        button{
+            padding: 15px 15px;
+            border-radius: 10px;
+            margin-left:120px;
+            font-size: large;
+        }
+        .booknow{
+            background-color: rgb(236, 74, 74);
+        }
+        .login{
+            margin-left: 2px;
+            background-color: green;
+        }
+        nav ul li a:hover{
+            color:purple;
+            /* background-color: aquamarine; */
+            border-bottom:2px solid purple;
+            
+            
+        }
+        nav  .booknow button:hover{
+                   background-color: rgb(245, 8, 8);
+        }
+        .booknow:hover{
+            background-color: red;
+        }
+        .login:hover{
+                   background-color: rgb(48, 226, 48);
+        }
+        .booknow a{
+            text-decoration: none;
+            color:black;
+        }
+        .contactus{
+            background-color: rgba(255, 186, 102,.5);
+            width:30%;
+            margin-left:2%;
+            border-radius:10px;
+            margin-top:5%;
+        }
+        .contactus h1{
+            color:black;
+        }
+        .contactus form input{
+            display:block;
+            margin-top:5%;
+            padding:2% 5%
+            
+        }
+        .contactus form textarea{
+            margin-top: 5%;
+            width:50%;
+            padding:15px 
+        }
+        .btn4 button{
+            margin-top: 5%;
+            width:30%;
+            padding:5px;
+            margin-left:35.5%;
+            background-color: aqua;
+        }
+        .btn4 button:hover{
+            background-color: rgb(12, 117, 117);
+        }
+</style>
+<body>
+    <nav>
+    
+        <logo>
+            <img style="margin-left: 1% " src="emergency.png" width="75" height="75" >
+        </logo>
+        <h2 style="margin-left: .2%;">AMBULANCE</h2>
+    
+        
+        
+            <ul>
+                
+                <li><a style="margin-left: 170px;" href="index.html">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="aboutus.html">AboutUs</a></li>
+                <li><a href="contactus.html">ContactUs</a></li>
+            </ul>
+            <form>
+            <button class="booknow" type="submit"><a href="booknow.html">Book Now</a></button>
+            <button class="login" type="submit">Login</button></form>
+            
+        </nav>
+        <div class="contactus">
+            <br><br>  
+            <center><h1>Contact Us</h1></center>
+            <form>
+              <center><input type="text" name="name" id="name" placeholder="Enter Full Name">
+              <input type="email" name="email" id="email" placeholder="Enter Your Email">
+              <textarea name="message" id="messsage" rows="2" cols="4">Type Message...</textarea></center>
+              <div class="btn4">
+                  <button type="submit" style="font-size: large;">submit</button>
+              </div>
+            </form><br><br>
+        </div> 
+</body>
+</html>
